@@ -137,5 +137,14 @@
 			status = "okay";
 			reg = <0xfffffe00 32>;
 		};
+
+		spi0: spi@fffff800 {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			compatible = "neorv32-spi";
+			status = "disabled";
+			reg = <0xfffff800 0x008>;
+			syscon = <&sysinfo>;
+		};
 	};
 };
